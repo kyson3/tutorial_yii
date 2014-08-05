@@ -1,0 +1,10 @@
+2014/08/04 23:09:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "prueba".' in Z:\home\yii15\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii15\framework\web\CController.php(270): CController->missingAction('prueba')
+#1 Z:\home\yii15\framework\web\CWebApplication.php(282): CController->run('prueba')
+#2 Z:\home\yii15\framework\web\CWebApplication.php(141): CWebApplication->runController('site/prueba')
+#3 Z:\home\yii15\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\tutorial_yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/tutorial_yii/index.php?r=site/prueba
+---
