@@ -7,3 +7,14 @@
  */
 
 echo "<h1>Hola he creado mi primera vista</h1>";
+
+?>
+
+<script>
+    $(function()){
+        $("#mostrar").html("<h3>В том числе Jquery код</h3>");
+    });
+
+</script>
+
+<div id="mostrar"></div>
