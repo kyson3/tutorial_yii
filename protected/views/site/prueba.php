@@ -6,15 +6,22 @@
  * and open the template in the editor.
  */
 
-echo "<h1>Hola he creado mi primera vista</h1>";
+require 'metainformation/prueba.php';
+
+$this->breadcrumbs=array (
+    'Prueba'
+);
+
+echo "<h1>Привет я создал свой первый взгляд</h1>";
 
 ?>
 
 <script>
     $(function()){
-        $("#mostrar").html("<h3>В том числе Jquery код</h3>");
+        $("#mostrar").html("<h3>Jquery код</h3>");
     });
 
 </script>
+<a href="index.php?r=site/page&view=articulo-1">Articulo 1</a>
 
 <div id="mostrar"></div>

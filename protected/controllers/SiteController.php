@@ -114,4 +114,16 @@ class SiteController extends Controller
         public function actionPrueba(){
             $this->render('prueba');
         }
+        
+         public function actionRegistro(){
+             $model = new ValidarRegistro;
+             
+             if(isset($_POST["ValidarRegistro"])) {
+                 $model->attributes = $_POST["ValidarRegistro"];
+                 if (!$model->validate()) {
+                     $this->redirect($this->createUrl('site/registro'));
+                 }
+             }
+            $this->render('registro',array('model'=>$model));
+        }
 }
