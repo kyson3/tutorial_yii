@@ -118,6 +118,8 @@ class SiteController extends Controller
          public function actionRegistro(){
              $model = new ValidarRegistro;
              
+             $model->sexo = 1;
+                     
              if(isset($_POST["ValidarRegistro"])) {
                  $model->attributes = $_POST["ValidarRegistro"];
                  if (!$model->validate()) {
