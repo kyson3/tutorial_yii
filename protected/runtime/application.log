@@ -91,3 +91,85 @@ Stack trace:
 #20 {main}
 REQUEST_URI=/tutorial_yii/index.php?r=site/registro
 ---
+2014/08/21 21:32:24 [error] [php] Object of class CCaptcha could not be converted to string (Z:\home\localhost\www\tutorial_yii\protected\views\site\registro.php:79)
+Stack trace:
+#0 Z:\home\yii15\framework\web\CController.php(869): SiteController->renderFile()
+#1 Z:\home\yii15\framework\web\CController.php(782): SiteController->renderPartial()
+#2 Z:\home\localhost\www\tutorial_yii\protected\controllers\SiteController.php(134): SiteController->render()
+#3 Z:\home\yii15\framework\web\actions\CInlineAction.php(49): SiteController->actionRegistro()
+#4 Z:\home\yii15\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\yii15\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\yii15\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\yii15\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\yii15\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\yii15\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\tutorial_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/tutorial_yii/index.php?r=site/registro
+in Z:\home\localhost\www\tutorial_yii\protected\views\site\registro.php (79)
+in Z:\home\localhost\www\tutorial_yii\protected\controllers\SiteController.php (134)
+in Z:\home\localhost\www\tutorial_yii\index.php (13)
+2014/08/21 21:34:08 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "ValidarRegistro.verifyCode".' in Z:\home\yii15\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\yii15\framework\web\helpers\CHtml.php(2529): CComponent->__get('verifyCode')
+#1 Z:\home\yii15\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(ValidarRegistro), 'verifyCode')
+#2 Z:\home\yii15\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(ValidarRegistro), 'verifyCode', Array)
+#3 Z:\home\localhost\www\tutorial_yii\protected\views\site\registro.php(80): CHtml::activeTextField(Object(ValidarRegistro), 'verifyCode')
+#4 Z:\home\yii15\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\yii15\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\yii15\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\yii15\framework\web\CController.php(782): CController->renderPartial('registro', Array, true)
+#8 Z:\home\localhost\www\tutorial_yii\protected\controllers\SiteController.php(134): CController->render('registro', Array)
+#9 Z:\home\yii15\framework\web\actions\CInlineAction.php(49): SiteController->actionRegistro()
+#10 Z:\home\yii15\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 Z:\home\yii15\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 Z:\home\yii15\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\yii15\framework\web\CWebApplication.php(282): CController->run('registro')
+#14 Z:\home\yii15\framework\web\CWebApplication.php(141): CWebApplication->runController('site/registro')
+#15 Z:\home\yii15\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 Z:\home\localhost\www\tutorial_yii\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/tutorial_yii/index.php?r=site/registro
+---
+2014/08/22 20:39:15 [error] [php] include(CosultasDB.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\yii15\framework\YiiBase.php:427)
+Stack trace:
+#0 Z:\home\localhost\www\tutorial_yii\protected\controllers\SiteController.php(133): spl_autoload_call()
+#1 Z:\home\yii15\framework\web\actions\CInlineAction.php(49): SiteController->actionRegistro()
+#2 Z:\home\yii15\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 Z:\home\yii15\framework\web\CController.php(286): SiteController->runAction()
+#4 Z:\home\yii15\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 Z:\home\yii15\framework\web\CWebApplication.php(282): SiteController->run()
+#6 Z:\home\yii15\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\yii15\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\tutorial_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/tutorial_yii/index.php?r=site/registro
+in Z:\home\localhost\www\tutorial_yii\protected\controllers\SiteController.php (133)
+in Z:\home\localhost\www\tutorial_yii\index.php (13)
+2014/08/22 20:40:23 [error] [php] include(CosultasDB.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\yii15\framework\YiiBase.php:427)
+Stack trace:
+#0 Z:\home\localhost\www\tutorial_yii\protected\controllers\SiteController.php(133): spl_autoload_call()
+#1 Z:\home\yii15\framework\web\actions\CInlineAction.php(49): SiteController->actionRegistro()
+#2 Z:\home\yii15\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 Z:\home\yii15\framework\web\CController.php(286): SiteController->runAction()
+#4 Z:\home\yii15\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 Z:\home\yii15\framework\web\CWebApplication.php(282): SiteController->run()
+#6 Z:\home\yii15\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\yii15\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\tutorial_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/tutorial_yii/index.php?r=site/registro
+in Z:\home\localhost\www\tutorial_yii\protected\controllers\SiteController.php (133)
+in Z:\home\localhost\www\tutorial_yii\index.php (13)
+2014/08/22 20:41:04 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "ValidarRegistro.".' in Z:\home\yii15\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\localhost\www\tutorial_yii\protected\controllers\SiteController.php(135): CComponent->__get('')
+#1 Z:\home\yii15\framework\web\actions\CInlineAction.php(49): SiteController->actionRegistro()
+#2 Z:\home\yii15\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 Z:\home\yii15\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 Z:\home\yii15\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 Z:\home\yii15\framework\web\CWebApplication.php(282): CController->run('registro')
+#6 Z:\home\yii15\framework\web\CWebApplication.php(141): CWebApplication->runController('site/registro')
+#7 Z:\home\yii15\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\tutorial_yii\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/tutorial_yii/index.php?r=site/registro
+HTTP_REFERER=http://localhost/tutorial_yii/index.php?r=site/registro
+---

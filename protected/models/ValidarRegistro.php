@@ -14,6 +14,7 @@ class ValidarRegistro extends CFormModel {
     public $repeat_password;
     public $sexo;
     public $terminos;
+    public $captcha;
 
 
     public function rules(){
@@ -53,6 +54,8 @@ class ValidarRegistro extends CFormModel {
                 'max' => 70,
                 'tooLong' => 'Max 70 caracteres'
             ),
+            
+            array('email','comprobar_email'),
             
             /*Validation password*/
             array(
@@ -107,7 +110,43 @@ class ValidarRegistro extends CFormModel {
                 'required',
                 'message' => 'Por favor, acepte los terminos',
                 
-            )
+            ),
+            
+            /* Validate Captha */
+//            array(
+//                'captcha',
+//                'captcha',
+//                'message' => 'Error el texto no es correcto',
+//            )
         );
+    }
+    
+    public function attributeLabels() {
+        return array (
+            'terminos' => 'Aceptar los terminos',
+        );
+    }
+    
+    public function comprobar_email($attributes, $params) {
+//        $emails = array('manu@mail.com','fernando@mail.com', 'raul@mail.com');
+//        
+//        foreach($emails as $e) {
+//            if ($this->email==$e){
+//                $this->addError('email','Email no disponible');
+//                break;
+//            }
+        
+            $conexion = Yii::app()->db;
+            $consulta = "SELECT email FROM usuarios";
+            $resultado = $conexion->createCommand($consulta);
+            $filas = $resultado->query();
+            
+             foreach($filas as $fila) {
+            if ($this->email==$fila['email']){
+                $this->addError('email','Email no disponible');
+                break;
+            }
+            
+        }
     }
 }

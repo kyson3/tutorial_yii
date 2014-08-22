@@ -4,6 +4,8 @@
             (
             'method' => 'POST',
             'action' => Yii::app()->createUrl('site/registro'),
+            'id' => 'form',
+            'enableAjaxValidation' => true,
             'enableClientValidation' => true,
             'clientOptions' => array (
                 'validateOnSubmit' => true,
@@ -69,6 +71,17 @@
             echo $form->error($model,'terminos');
         ?>
     </div>
+    
+    <div class='row'>
+        <?php
+        
+        CHtml::activeLabelEx($model, 'captcha');
+    $this->widget('CCaptcha');
+    CHtml::activeTextField($model, 'captcha');
+        ?>
+    </div>
+    
+    
     
     
     <div class='row'>

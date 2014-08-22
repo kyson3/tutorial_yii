@@ -119,11 +119,29 @@ class SiteController extends Controller
              $model = new ValidarRegistro;
              
              $model->sexo = 1;
+             
+             if (isset($_POST['ajax']) && $_POST['ajax'] == 'form') {
+                 echo CActiveForm::validate($model);
+                 Yii::app()->end();
+             }
                      
              if(isset($_POST["ValidarRegistro"])) {
                  $model->attributes = $_POST["ValidarRegistro"];
                  if (!$model->validate()) {
                      $this->redirect($this->createUrl('site/registro'));
+                 } else {
+                     $consulta = new ConsultasDB;
+                     $consulta->guardar_usuario(
+                             $model->nombre, 
+                             $model->email,
+                             $model->password,
+                             $model->sexo
+                             );
+                     
+                     $msg = 'Enhorabuena, le hemos enviado un correo electronico';
+                     $msg .= ' a su cuenta de email para que confirme su registro';
+                     
+                     $model->unsetAttributes();
                  }
              }
             $this->render('registro',array('model'=>$model));
